@@ -1,0 +1,157 @@
+index.html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>lllBl4ckSuN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: #e0e0e0;
+      font-family: Georgia, "Times New Roman", serif;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at center, rgba(255,80,0,0.15), rgba(0,0,0,0.95) 70%),
+        url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35) contrast(1.2);
+      z-index: -2;
+    }
+
+    .embers {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,120,0,0.6) 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity: 0.15;
+      animation: drift 40s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes drift {
+      from { background-position: 0 0; }
+      to { background-position: 400px -800px; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 30px 120px;
+      text-align: center;
+    }
+
+    .sun {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #000 45%, #ff4d00 62%, #000 78%);
+      box-shadow: 0 0 60px 25px rgba(255,90,0,0.7);
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 35px 15px rgba(255,80,0,0.4); }
+      50%  { box-shadow: 0 0 85px 40px rgba(255,120,0,0.9); }
+      100% { box-shadow: 0 0 35px 15px rgba(255,80,0,0.4); }
+    }
+
+    h1 {
+      font-size: 48px;
+      letter-spacing: 10px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 18px rgba(255,90,0,0.9);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      letter-spacing: 4px;
+      color: #ff6a00;
+      margin-bottom: 60px;
+    }
+
+    section {
+      margin-bottom: 80px;
+      padding: 40px;
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,100,0,0.25);
+      box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      letter-spacing: 6px;
+      color: #ff6a00;
+      text-shadow: 0 0 12px rgba(255,100,0,0.8);
+    }
+
+    section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .footer {
+      margin-top: 120px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background"></div>
+  <div class="embers"></div>
+
+  <div class="container">
+
+    <div class="sun"></div>
+
+    <h1>lllBl4ckSuN</h1>
+    <div class="subtitle">WELCOME TO THE VOID</div>
+
+    <section>
+      <h2>ABOUT ME</h2>
+      <p>
+        Schatten sind kein Zufluchtsort – sie sind ein Zustand.
+        <br><br>
+        Gefährlich. Unnahbar. Gezeichnet von Feuer und Dunkelheit.
+        Zwischen Realität und Fantasy existiert nur Wille.
+      </p>
+    </section>
+
+    <section>
+      <h2>MINDSTORM</h2>
+      <p>
+        Gedanken brennen langsamer als Feuer,
+        aber sie hinterlassen tiefere Narben.
+        <br><br>
+        Chaos formt Stärke. Stille formt Macht.
+      </p>
+    </section>
+
+    <div class="footer">
+      © lllBl4ckSuN
+    </div>
+
+  </div>
+
+</body>
+</html>
